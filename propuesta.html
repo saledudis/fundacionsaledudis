@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maestro Miel llega a Argentina · Propuesta Sponsor · Fundación SalEduDis</title>
+<meta name="description" content="Programa Argentino de Prevención y Educación Emocional por la Infancia 2026. Sumate como sponsor.">
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ─── Reset & Base ─── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'Inter',system-ui,sans-serif;
+  background:#ffffff;
+  color:#111111;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img { display:block; max-width:100%; }
+a { text-decoration:none; color:inherit; }
+
+/* ─── Variables ─── */
+:root {
+  --blue: #2563EB;
+  --blue-dark: #1D4ED8;
+  --blue-light: #EFF6FF;
+  --text-1: #111111;
+  --text-2: #333333;
+  --text-3: #555555;
+  --text-4: #888888;
+  --border: #E5E7EB;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.10), 0 8px 16px rgba(0,0,0,0.06);
+  --shadow-xl: 0 32px 64px rgba(37,99,235,0.15), 0 8px 24px rgba(0,0,0,0.08);
+  --radius: 14px;
+  --max-w: 1200px;
+}
+
+/* ─── Container ─── */
+.container { max-width:var(--max-w); margin:0 auto; padding:0 2rem; }
+@media(max-width:768px){.container{padding:0 1.25rem;}}
+
+/* ─── Navbar ─── */
+.navbar {
+  position:fixed; top:0; left:0; right:0; z-index:999;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s;
+}
+.navbar.shadow { box-shadow:var(--shadow-md); }
+.nav-inner {
+  max-width:var(--max-w); margin:0 auto; padding:0 2rem;
+  height:68px; display:flex; align-items:center; justify-content:space-between;
+  gap:1.5rem;
+}
+.nav-brand { display:flex; align-items:center; gap:0.75rem; }
+.nav-brand img { height:36px; width:auto; }
+.nav-brand-text { font-size:0.9rem; font-weight:700; color:var(--text-1); letter-spacing:-0.02em; }
+.nav-brand-sub { font-size:0.72rem; color:var(--text-4); font-weight:400; }
+.nav-cta {
+  display:inline-flex; align-items:center; gap:0.4rem;
+  background:var(--blue); color:#fff;
+  padding:0.6rem 1.3rem; border-radius:100px;
+  font-size:0.88rem; font-weight:600;
+  transition:all 0.3s ease;
+  white-space:nowrap;
+}
+.nav-cta:hover { background:var(--blue-dark); box-shadow:0 6px 20px rgba(37,99,235,0.3); transform:translateY(-1px); }
+@media(max-width:600px){.nav-brand-sub{display:none;}}
+
+/* ─── Buttons ─── */
+.btn {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  padding:0.85rem 1.8rem; border-radius:100px;
+  font-size:1rem; font-weight:600;
+  cursor:pointer; border:none;
+  transition:all 0.3s ease;
+  white-space:nowrap;
+  text-decoration:none;
+}
+.btn-primary {
+  background:var(--blue); color:#fff;
+  box-shadow:0 4px 14px rgba(37,99,235,0.25);
+}
+.btn-primary:hover { background:var(--blue-dark); box-shadow:0 8px 24px rgba(37,99,235,0.4); transform:translateY(-2px); }
+.btn-secondary {
+  background:#F3F4F6; color:var(--text-2);
+  border:1.5px solid var(--border);
+}
+.btn-secondary:hover { background:#E9EAEC; border-color:#D1D5DB; transform:translateY(-1px); }
+.btn-outline {
+  background:transparent; color:var(--blue);
+  border:1.5px solid var(--blue);
+}
+.btn-outline:hover { background:var(--blue-light); }
+.btn-white {
+  background:#fff; color:var(--blue);
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
+}
+.btn-white:hover { background:#F0F7FF; transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.15); }
+.btn-ghost-white {
+  background:rgba(255,255,255,0.12); color:#fff;
+  border:1.5px solid rgba(255,255,255,0.3);
+}
+.btn-ghost-white:hover { background:rgba(255,255,255,0.22); }
+
+/* ─── Section spacing ─── */
+.section { padding:7rem 0; }
+.section-sm { padding:5rem 0; }
+.section-label {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--blue); margin-bottom:1.25rem;
+}
+.section-label::before { content:""; width:20px; height:2px; background:var(--blue); border-radius:2px; }
+.section-title { font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.03em; color:var(--text-1); margin-bottom:1.25rem; }
+.section-sub { font-size:clamp(1rem,1.5vw,1.15rem); color:var(--text-3); max-width:600px; line-height:1.65; }
+.centered { text-align:center; }
+.centered .section-sub { margin:0 auto; }
+.centered .section-label { justify-content:center; }
+.centered .section-label::before { display:none; }
+.centered .section-label::after { content:""; width:20px; height:2px; background:var(--blue); border-radius:2px; }
+
+/* ─── HERO ─── */
+.hero {
+  padding:9rem 0 5rem;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 50%, #EFF6FF 0%, transparent 70%),
+    #ffffff;
+  overflow:hidden;
+  position:relative;
+}
+.hero::before {
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(37,99,235,0.04) 0%, transparent 40%);
+  pointer-events:none;
+}
+.hero-inner {
+  max-width:var(--max-w); margin:0 auto; padding:0 2rem;
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:4rem; align-items:center;
+}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:3rem;}}
+.hero-text {}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  background:var(--blue-light); color:var(--blue);
+  padding:0.45rem 1rem; border-radius:100px;
+  font-size:0.8rem; font-weight:600; margin-bottom:2rem;
+  border:1px solid rgba(37,99,235,0.15);
+}
+.hero-badge-dot { width:6px; height:6px; background:var(--blue); border-radius:50%; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+.hero h1 {
+  font-size:clamp(2.8rem,5.5vw,4.2rem);
+  font-weight:900; line-height:1.05;
+  letter-spacing:-0.04em;
+  color:var(--text-1);
+  margin-bottom:1.25rem;
+}
+.hero h1 .accent { color:var(--blue); }
+.hero-subtitle {
+  font-size:clamp(1rem,1.6vw,1.2rem);
+  font-weight:600; color:var(--text-2);
+  margin-bottom:1.25rem; letter-spacing:-0.01em;
+}
+.hero-desc {
+  font-size:1.05rem; color:var(--text-3);
+  line-height:1.7; margin-bottom:2.5rem; max-width:480px;
+}
+.hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+@media(max-width:480px){.hero-actions .btn{flex:1;justify-content:center;}}
+.hero-image {
+  position:relative;
+}
+.hero-img-wrap {
+  border-radius:24px; overflow:hidden;
+  box-shadow:var(--shadow-xl);
+  position:relative;
+  background:#f1f5f9;
+  aspect-ratio:4/5;
+}
+.hero-img-wrap img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.hero-img-badge {
+  position:absolute; bottom:1.5rem; left:1.5rem;
+  background:white; border-radius:12px;
+  padding:0.85rem 1.25rem;
+  box-shadow:var(--shadow-lg);
+  display:flex; align-items:center; gap:0.75rem;
+  animation:float 4s ease-in-out infinite;
+}
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.hero-img-badge-icon { font-size:1.6rem; }
+.hero-img-badge-text strong { display:block; font-size:0.9rem; font-weight:700; color:var(--text-1); }
+.hero-img-badge-text span { font-size:0.78rem; color:var(--text-4); }
+.hero-stats {
+  display:flex; gap:0.75rem; margin-top:2rem; flex-wrap:wrap;
+}
+.hero-stat {
+  background:white; border:1px solid var(--border);
+  border-radius:10px; padding:0.75rem 1rem;
+  box-shadow:var(--shadow-sm);
+}
+.hero-stat-num { font-size:1.4rem; font-weight:800; color:var(--blue); letter-spacing:-0.03em; }
+.hero-stat-label { font-size:0.75rem; color:var(--text-4); font-weight:500; }
+
+/* ─── WHY SECTION ─── */
+.why { background:#FAFAFA; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.why-grid {
+  display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin-top:3.5rem;
+}
+@media(max-width:1000px){.why-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr 1fr;}}
+.why-item {
+  background:white; border:1px solid var(--border); border-radius:var(--radius);
+  padding:1.75rem 1.25rem; text-align:center;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.35s ease;
+  cursor:default;
+}
+.why-item:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:rgba(37,99,235,0.2); }
+.why-icon { font-size:2rem; margin-bottom:0.85rem; display:block; }
+.why-item h3 { font-size:0.88rem; font-weight:700; color:var(--text-1); line-height:1.35; }
+
+/* ─── SPONSORS ─── */
+.sponsors-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3.5rem;
+}
+@media(max-width:900px){.sponsors-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.sponsors-grid{grid-template-columns:1fr;}}
+.sponsor-card {
+  background:white; border:1.5px solid var(--border); border-radius:var(--radius);
+  padding:2.5rem 2rem; box-shadow:var(--shadow-sm);
+  transition:all 0.35s ease;
+  position:relative; display:flex; flex-direction:column;
+}
+.sponsor-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+.sponsor-card.featured {
+  border-color:var(--blue); border-width:2px;
+  box-shadow:var(--shadow-xl);
+  transform:scale(1.03);
+  z-index:2;
+}
+.sponsor-card.featured:hover { transform:scale(1.03) translateY(-6px); }
+.sponsor-card-badge {
+  position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+  background:var(--blue); color:white;
+  font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+  padding:0.35rem 1rem; border-radius:100px;
+  white-space:nowrap;
+}
+.sponsor-tier {
+  font-size:0.78rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--text-4); margin-bottom:0.75rem;
+}
+.sponsor-name {
+  display:flex; align-items:center; gap:0.5rem;
+  font-size:1.6rem; font-weight:800; color:var(--text-1);
+  letter-spacing:-0.03em; margin-bottom:2rem;
+}
+.sponsor-features { list-style:none; flex:1; margin-bottom:2rem; }
+.sponsor-features li {
+  display:flex; align-items:flex-start; gap:0.65rem;
+  font-size:0.92rem; color:var(--text-2); padding:0.55rem 0;
+  border-bottom:1px solid #F3F4F6;
+}
+.sponsor-features li:last-child { border-bottom:none; }
+.sponsor-check {
+  width:18px; height:18px; border-radius:50%;
+  background:var(--blue-light); color:var(--blue);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.6rem; flex-shrink:0; margin-top:1px;
+  font-weight:800;
+}
+.sponsor-card.featured .sponsor-check { background:var(--blue); color:white; }
+.sponsor-cta .btn { width:100%; justify-content:center; }
+
+/* ─── FINANCIAMIENTO ─── */
+.financiamiento { background:#FAFAFA; }
+.fin-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:3.5rem;
+}
+@media(max-width:900px){.fin-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.fin-grid{grid-template-columns:1fr 1fr;}}
+.fin-item {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:1.5rem; text-align:center;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.3s ease;
+}
+.fin-item:hover { box-shadow:var(--shadow-md); transform:translateY(-4px); }
+.fin-icon { font-size:1.8rem; margin-bottom:0.65rem; display:block; }
+.fin-item p { font-size:0.85rem; font-weight:600; color:var(--text-2); line-height:1.35; }
+
+.frase-destacada {
+  text-align:center; margin-top:4rem;
+  padding:3.5rem 2rem;
+  background:linear-gradient(135deg,#1D4ED8 0%,#2563EB 40%,#3B82F6 100%);
+  border-radius:20px;
+  position:relative; overflow:hidden;
+}
+.frase-destacada::before {
+  content:"";
+  position:absolute; top:-40%; right:-10%; width:50%; height:200%;
+  background:radial-gradient(circle,rgba(255,255,255,0.08) 0%,transparent 60%);
+  pointer-events:none;
+}
+.frase-destacada blockquote {
+  font-size:clamp(1.5rem,3vw,2.4rem);
+  font-weight:800; color:white;
+  letter-spacing:-0.03em; line-height:1.2;
+  position:relative; z-index:2;
+}
+.frase-destacada blockquote::before {
+  content:'"'; font-size:5rem; color:rgba(255,255,255,0.15);
+  line-height:0; vertical-align:-2rem;
+  margin-right:0.2rem; font-family:Georgia,serif;
+}
+
+/* ─── PRUEBA SOCIAL ─── */
+.social-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3.5rem;
+}
+@media(max-width:900px){.social-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.social-grid{grid-template-columns:1fr;}}
+.social-card {
+  background:white; border:1px solid var(--border); border-radius:var(--radius);
+  padding:2rem; box-shadow:var(--shadow-sm);
+  transition:all 0.35s ease;
+  display:flex; flex-direction:column; gap:1.25rem;
+}
+.social-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-5px); border-color:rgba(37,99,235,0.2); }
+.social-platform {
+  display:flex; align-items:center; gap:0.5rem;
+  font-size:0.78rem; font-weight:700; color:var(--text-4); letter-spacing:0.08em; text-transform:uppercase;
+}
+.tiktok-icon {
+  width:22px; height:22px; background:#000; border-radius:5px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.75rem; color:#fff; font-weight:900;
+}
+.social-card h3 { font-size:1.1rem; font-weight:700; color:var(--text-1); letter-spacing:-0.02em; line-height:1.3; }
+.social-card .btn { margin-top:auto; }
+
+/* ─── CTA FINAL ─── */
+.cta-final {
+  background:linear-gradient(135deg,#0F172A 0%,#1E3A5F 40%,#1D4ED8 100%);
+  padding:8rem 0; position:relative; overflow:hidden;
+}
+.cta-final::before {
+  content:"";
+  position:absolute; top:-30%; right:-5%; width:60%; height:160%;
+  background:radial-gradient(circle,rgba(59,130,246,0.2) 0%,transparent 60%);
+  pointer-events:none;
+}
+.cta-final::after {
+  content:"";
+  position:absolute; bottom:-30%; left:-5%; width:50%; height:140%;
+  background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 50%);
+  pointer-events:none;
+}
+.cta-inner { position:relative; z-index:2; text-align:center; }
+.cta-kicker {
+  font-size:0.78rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase;
+  color:rgba(147,197,253,1); margin-bottom:1.5rem;
+}
+.cta-final h2 {
+  font-size:clamp(2.2rem,5vw,3.8rem); font-weight:900;
+  color:white; letter-spacing:-0.04em; line-height:1.05;
+  margin-bottom:1rem;
+}
+.cta-final p {
+  font-size:1.1rem; color:rgba(255,255,255,0.7);
+  max-width:540px; margin:0 auto 3rem; line-height:1.65;
+}
+.cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:4rem; }
+@media(max-width:500px){.cta-buttons .btn{flex:1;justify-content:center;}}
+.cta-info-grid {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:1rem; max-width:560px; margin:0 auto;
+}
+@media(max-width:600px){.cta-info-grid{grid-template-columns:1fr;}}
+.cta-info-card {
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:12px; padding:1.25rem 1.5rem; text-align:left;
+}
+.cta-info-label { font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(147,197,253,0.8); margin-bottom:0.25rem; }
+.cta-info-value { font-size:0.95rem; font-weight:600; color:rgba(255,255,255,0.92); }
+.cta-info-value a { color:rgba(147,197,253,1); }
+
+/* ─── FOOTER ─── */
+.footer {
+  background:#F9FAFB; border-top:1px solid var(--border);
+  padding:2.5rem 0;
+}
+.footer-inner {
+  max-width:var(--max-w); margin:0 auto; padding:0 2rem;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.25rem;
+}
+.footer-brand { display:flex; align-items:center; gap:0.65rem; }
+.footer-brand img { height:30px; width:auto; }
+.footer-brand-name { font-size:0.88rem; font-weight:700; color:var(--text-2); }
+.footer-copy { font-size:0.8rem; color:var(--text-4); }
+.footer-links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+.footer-links a { font-size:0.85rem; color:var(--text-4); transition:color 0.2s; font-weight:500; }
+.footer-links a:hover { color:var(--blue); }
+
+/* ─── QUIÉN ES MAESTRO MIEL ─── */
+.quien { background:#ffffff; }
+.quien-inner {
+  display:grid; grid-template-columns:420px 1fr;
+  gap:4.5rem; align-items:flex-start;
+}
+@media(max-width:1100px){.quien-inner{grid-template-columns:340px 1fr;gap:3rem;}}
+@media(max-width:850px){.quien-inner{grid-template-columns:1fr;gap:2.5rem;}}
+.quien-img-wrap {
+  border-radius:20px; overflow:hidden;
+  box-shadow:var(--shadow-xl);
+  position:relative; background:#f1f5f9;
+}
+.quien-img-wrap img { width:100%; display:block; object-fit:cover; }
+.quien-img-tag {
+  position:absolute; bottom:1rem; left:1rem; right:1rem;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(8px);
+  border-radius:10px; padding:0.65rem 1rem;
+  display:flex; align-items:center; gap:0.6rem;
+  font-size:0.82rem; font-weight:600; color:var(--text-2);
+  box-shadow:var(--shadow-md);
+}
+.quien-name {
+  font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800;
+  color:var(--text-1); letter-spacing:-0.03em;
+  margin-bottom:0.5rem; margin-top:-0.5rem;
+}
+.quien-roles {
+  font-size:0.92rem; font-weight:600; color:var(--blue);
+  letter-spacing:0.04em; margin-bottom:1.5rem;
+  text-transform:uppercase;
+}
+.quien-desc {
+  font-size:1.05rem; color:var(--text-3); line-height:1.75;
+  margin-bottom:2.5rem;
+}
+.formacion-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;
+  margin-bottom:2.5rem;
+}
+@media(max-width:580px){.formacion-grid{grid-template-columns:1fr;}}
+.formacion-card {
+  display:flex; align-items:center; gap:0.65rem;
+  background:#F9FAFB; border:1px solid var(--border);
+  border-radius:10px; padding:0.85rem 1rem;
+  font-size:0.88rem; font-weight:500; color:var(--text-2);
+  transition:all 0.3s ease; cursor:default;
+}
+.formacion-card:hover {
+  background:var(--blue-light); border-color:rgba(37,99,235,0.2);
+  transform:translateY(-2px); box-shadow:var(--shadow-sm); color:var(--blue);
+}
+.formacion-icon { font-size:1.1rem; flex-shrink:0; }
+.metricas-row {
+  display:flex; align-items:center;
+  background:#F9FAFB; border:1px solid var(--border);
+  border-radius:14px; padding:1.5rem 2rem;
+  margin-bottom:1.5rem;
+}
+@media(max-width:480px){.metricas-row{flex-direction:column;gap:1.25rem;padding:1.25rem;}}
+.metrica { flex:1; text-align:center; }
+.metrica-num {
+  font-size:clamp(1.8rem,3vw,2.4rem); font-weight:900;
+  color:var(--blue); letter-spacing:-0.04em; line-height:1;
+  margin-bottom:0.3rem;
+}
+.metrica-label { font-size:0.78rem; color:var(--text-4); font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
+.metrica-divider { width:1px; height:48px; background:var(--border); flex-shrink:0; }
+@media(max-width:480px){.metrica-divider{width:40px;height:1px;}}
+.disclaimer { font-size:0.75rem; color:var(--text-4); line-height:1.6; font-style:italic; padding-top:0.5rem; }
+
+/* ─── TEMÁTICAS ─── */
+.tematicas { background:#FAFAFA; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.tematicas-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1.25rem; margin-top:3.5rem;
+}
+@media(max-width:900px){.tematicas-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:540px){.tematicas-grid{grid-template-columns:1fr;}}
+.tematica-card {
+  background:white; border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.75rem 1.5rem;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.35s ease; cursor:default;
+  display:flex; flex-direction:column; gap:0.85rem;
+}
+.tematica-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:rgba(37,99,235,0.2); }
+.tematica-icon { font-size:2rem; display:block; }
+.tematica-card h3 { font-size:0.95rem; font-weight:700; color:var(--text-1); line-height:1.35; }
+
+/* ─── PROPUESTA ARGENTINA ─── */
+.propuesta-arg { background:#ffffff; }
+.propuesta-cols { display:grid; grid-template-columns:1fr 1fr; gap:1.75rem; }
+@media(max-width:760px){.propuesta-cols{grid-template-columns:1fr;}}
+.propuesta-col {
+  background:white; border:1.5px solid var(--border);
+  border-radius:var(--radius); padding:2.25rem;
+  box-shadow:var(--shadow-sm); transition:all 0.35s ease;
+}
+.propuesta-col:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
+.propuesta-col-header {
+  display:flex; align-items:center; gap:0.75rem;
+  margin-bottom:1.75rem; padding-bottom:1.25rem;
+  border-bottom:1px solid var(--border);
+}
+.propuesta-col-icon { font-size:1.6rem; }
+.propuesta-col-header h3 { font-size:1.1rem; font-weight:800; color:var(--text-1); letter-spacing:-0.02em; }
+.propuesta-list { list-style:none; display:flex; flex-direction:column; }
+.propuesta-list li {
+  display:flex; align-items:flex-start; gap:0.7rem;
+  font-size:0.92rem; color:var(--text-2); font-weight:500;
+  padding:0.65rem 0; border-bottom:1px solid #F3F4F6; line-height:1.4;
+}
+.propuesta-list li:last-child { border-bottom:none; }
+.check-blue {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:18px; height:18px; border-radius:50%;
+  background:var(--blue-light); color:var(--blue);
+  font-size:0.6rem; font-weight:900; flex-shrink:0; margin-top:1px;
+}
+
+/* ─── Reveal animations ─── */
+.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
+.reveal.up { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="img/logo.png" alt="SalEduDis">
+      <div>
+        <div class="nav-brand-text">Fundación SalEduDis</div>
+        <div class="nav-brand-sub">Salud · Educación · Discapacidad</div>
+      </div>
+    </div>
+    <a href="#contacto" class="nav-cta btn">Quiero ser sponsor →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Programa Internacional · Argentina 2026/2027
+      </div>
+      <h1><span class="accent">Maestro Miel</span><br>llega a Argentina.</h1>
+      <p class="hero-subtitle">Programa Argentino de Prevención y Educación Emocional por la Infancia 2026/2027.</p>
+      <p class="hero-desc">Un proyecto internacional orientado a fortalecer la protección de las infancias, promover la educación emocional y cuidar la salud mental docente mediante conferencias, talleres y jornadas formativas de alto impacto.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Quiero ser sponsor →</a>
+        <a href="#sponsors" class="btn btn-secondary">Sponsors y alianzas</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">1.5M+</div>
+          <div class="hero-stat-label">Seguidores</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">Dr. HC</div>
+          <div class="hero-stat-label">Honoris Causa</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14+</div>
+          <div class="hero-stat-label">Países activos</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image reveal">
+      <div class="hero-img-wrap">
+        <img src="img/maestromiel.png" alt="Maestro Miel — Pedro Cota">
+        <div class="hero-img-badge">
+          <div class="hero-img-badge-icon">🏆</div>
+          <div class="hero-img-badge-text">
+            <strong>Pedro Cota</strong>
+            <span>Dr. Honoris Causa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- QUIÉN ES MAESTRO MIEL                       -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section quien">
+  <div class="container">
+    <div class="quien-inner">
+
+      <!-- Imagen -->
+      <div class="quien-img-col reveal">
+        <div class="quien-img-wrap">
+          <img src="img/maestromiel.png" alt="Pedro Cota — Maestro Miel">
+          <div class="quien-img-tag">
+            <span>🇲🇽</span>
+            <span>Guadalajara, Jalisco · México</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="quien-text-col">
+        <div class="section-label reveal">El conferencista</div>
+        <h2 class="section-title reveal">Quién es Maestro Miel</h2>
+        <p class="quien-name reveal">Pedro Abisaí Cota Corral.</p>
+        <p class="quien-roles reveal">Maestro · Psicoterapeuta · Conferencista · Activista</p>
+        <p class="quien-desc reveal">Conocido en redes y medios como Maestro Miel, Pedro Cota es un educador mexicano originario de Guadalajara, Jalisco, reconocido internacionalmente por su trabajo en prevención del abuso infantil, educación emocional y desarrollo de vínculos protectores en la primera infancia.</p>
+
+        <!-- Cards de formación -->
+        <div class="formacion-grid reveal">
+          <div class="formacion-card">
+            <span class="formacion-icon">🎓</span>
+            <span>Lic. en Ciencias de la Educación</span>
+          </div>
+          <div class="formacion-card">
+            <span class="formacion-icon">🧠</span>
+            <span>Maestría en Psicoterapia Gestalt</span>
+          </div>
+          <div class="formacion-card">
+            <span class="formacion-icon">🎮</span>
+            <span>Diplomado en terapia de juego</span>
+          </div>
+          <div class="formacion-card">
+            <span class="formacion-icon">📅</span>
+            <span>12 años de experiencia docente</span>
+          </div>
+          <div class="formacion-card">
+            <span class="formacion-icon">🌎</span>
+            <span>Conferencista internacional</span>
+          </div>
+          <div class="formacion-card">
+            <span class="formacion-icon">🛡️</span>
+            <span>Activista contra el abuso infantil</span>
+          </div>
+        </div>
+
+        <!-- Métricas -->
+        <div class="metricas-row reveal">
+          <div class="metrica">
+            <div class="metrica-num">1,5M+</div>
+            <div class="metrica-label">Seguidores</div>
+          </div>
+          <div class="metrica-divider"></div>
+          <div class="metrica">
+            <div class="metrica-num">21M+</div>
+            <div class="metrica-label">Interacciones</div>
+          </div>
+          <div class="metrica-divider"></div>
+          <div class="metrica">
+            <div class="metrica-num">8</div>
+            <div class="metrica-label">Países visitados</div>
+          </div>
+        </div>
+
+        <p class="disclaimer reveal">Formación académica y datos de trayectoria según información provista por el conferencista. Datos digitales verificados públicamente al momento de emisión del presente material.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TEMÁTICAS DE CONFERENCIA                    -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section tematicas">
+  <div class="container">
+    <div class="centered">
+      <div class="section-label">Contenidos</div>
+      <h2 class="section-title">Temáticas de conferencia</h2>
+      <p class="section-sub"><strong style="color:var(--text-1);">Diez ejes temáticos para la formación integral.</strong></p>
+      <p class="section-sub" style="margin-top:0.5rem;">El Maestro Miel aborda en sus conferencias y talleres los principales desafíos de la educación emocional contemporánea, con un enfoque preventivo y comunitario.</p>
+    </div>
+    <div class="tematicas-grid">
+      <div class="tematica-card reveal"><span class="tematica-icon">⚠️</span><h3>Prevención del abuso sexual infantil</h3></div>
+      <div class="tematica-card reveal reveal-delay-1"><span class="tematica-icon">💛</span><h3>Hipersexualización en la infancia</h3></div>
+      <div class="tematica-card reveal reveal-delay-2"><span class="tematica-icon">✨</span><h3>Educación emocional</h3></div>
+      <div class="tematica-card reveal"><span class="tematica-icon">🩹</span><h3>Autoestima infantil</h3></div>
+      <div class="tematica-card reveal reveal-delay-1"><span class="tematica-icon">🧠</span><h3>Heridas de la infancia</h3></div>
+      <div class="tematica-card reveal reveal-delay-2"><span class="tematica-icon">🕊️</span><h3>Salud mental docente</h3></div>
+      <div class="tematica-card reveal"><span class="tematica-icon">⚡</span><h3>Educación para la paz</h3></div>
+      <div class="tematica-card reveal reveal-delay-1"><span class="tematica-icon">🔬</span><h3>Violencia en la infancia</h3></div>
+      <div class="tematica-card reveal reveal-delay-2"><span class="tematica-icon">🤝</span><h3>Neuroeducación emocional</h3></div>
+      <div class="tematica-card reveal"><span class="tematica-icon">💛</span><h3>Vínculos saludables y protectores</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LA PROPUESTA PARA ARGENTINA                 -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section propuesta-arg">
+  <div class="container">
+    <div class="centered" style="margin-bottom:3.5rem;">
+      <div class="section-label">Gira nacional 2026/2027</div>
+      <h2 class="section-title">La propuesta para Argentina</h2>
+      <p class="section-sub"><strong style="color:var(--text-1);">Una gira nacional, ocho audiencias.</strong></p>
+      <p class="section-sub" style="margin-top:0.5rem;">Proyectamos una gira por Argentina entre octubre de 2026 y el ciclo 2027, articulando con instituciones públicas, privadas y comunitarias.</p>
+    </div>
+    <div class="propuesta-cols">
+
+      <div class="propuesta-col reveal">
+        <div class="propuesta-col-header">
+          <span class="propuesta-col-icon">👥</span>
+          <h3>Audiencias destinatarias</h3>
+        </div>
+        <ul class="propuesta-list">
+          <li><span class="check-blue">✓</span> Docentes y equipos directivos</li>
+          <li><span class="check-blue">✓</span> Psicólogos y profesionales de la salud mental</li>
+          <li><span class="check-blue">✓</span> Familias y comunidad educativa</li>
+          <li><span class="check-blue">✓</span> Municipios y gobiernos locales</li>
+          <li><span class="check-blue">✓</span> Universidades y centros académicos</li>
+          <li><span class="check-blue">✓</span> Ministerios provinciales y nacionales</li>
+          <li><span class="check-blue">✓</span> Organizaciones sociales y ONG</li>
+          <li><span class="check-blue">✓</span> Medios de comunicación</li>
+        </ul>
+      </div>
+
+      <div class="propuesta-col reveal reveal-delay-1">
+        <div class="propuesta-col-header">
+          <span class="propuesta-col-icon">🎤</span>
+          <h3>Formatos de intervención</h3>
+        </div>
+        <ul class="propuesta-list">
+          <li><span class="check-blue">✓</span> Conferencias magistrales abiertas</li>
+          <li><span class="check-blue">✓</span> Talleres intensivos para profesionales</li>
+          <li><span class="check-blue">✓</span> Jornadas institucionales cerradas</li>
+          <li><span class="check-blue">✓</span> Congresos y simposios</li>
+          <li><span class="check-blue">✓</span> Formación virtual sincrónica</li>
+          <li><span class="check-blue">✓</span> Encuentros con familias</li>
+          <li><span class="check-blue">✓</span> Mesas con autoridades públicas</li>
+          <li><span class="check-blue">✓</span> Material formativo certificado</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ APOYAR -->
+<section class="section why" id="por-que">
+  <div class="container">
+    <div class="centered">
+      <div class="section-label">Sponsors y alianzas</div>
+      <h2 class="section-title">¿Por qué apoyar este proyecto?</h2>
+      <p class="section-sub">Acompañar este programa significa asociar a su institución a una causa de impacto real, vinculada a la protección de las infancias y al bienestar educativo.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <span class="why-icon">💡</span>
+        <h3>Impacto social real y verificable</h3>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <span class="why-icon">🏛️</span>
+        <h3>Visibilidad institucional</h3>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <span class="why-icon">🎯</span>
+        <h3>Marca asociada a causa social</h3>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <span class="why-icon">📰</span>
+        <h3>Presencia en prensa y materiales</h3>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-icon">🌎</span>
+        <h3>Asociación a proyecto internacional</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NIVELES DE SPONSOR -->
+<section class="section" id="sponsors">
+  <div class="container">
+    <div class="centered">
+      <div class="section-label">Niveles de participación</div>
+      <h2 class="section-title">Niveles de sponsor</h2>
+      <p class="section-sub">Tres modalidades de alianza institucional, diseñadas para distintos niveles de compromiso y visibilidad.</p>
+    </div>
+    <div class="sponsors-grid">
+
+      <!-- PLATA -->
+      <div class="sponsor-card reveal">
+        <div class="sponsor-tier">Sponsor</div>
+        <div class="sponsor-name">🥈 Plata</div>
+        <ul class="sponsor-features">
+          <li><span class="sponsor-check">✓</span> Logo secundario en piezas oficiales</li>
+          <li><span class="sponsor-check">✓</span> Presencia en materiales impresos y digitales</li>
+          <li><span class="sponsor-check">✓</span> Difusión en redes sociales del proyecto</li>
+          <li><span class="sponsor-check">✓</span> Mención en agradecimientos del evento</li>
+          <li><span class="sponsor-check">✓</span> Acceso preferencial a las jornadas</li>
+        </ul>
+        <div class="sponsor-cta">
+          <a href="#contacto" class="btn btn-outline">Quiero ser sponsor</a>
+        </div>
+      </div>
+
+      <!-- ORO (destacada) -->
+      <div class="sponsor-card featured reveal reveal-delay-1">
+        <div class="sponsor-card-badge">⭐ Más elegido</div>
+        <div class="sponsor-tier">Sponsor</div>
+        <div class="sponsor-name">🥇 Oro</div>
+        <ul class="sponsor-features">
+          <li><span class="sponsor-check">✓</span> Logo principal en todas las piezas institucionales</li>
+          <li><span class="sponsor-check">✓</span> Presencia destacada en escenario y material gráfico</li>
+          <li><span class="sponsor-check">✓</span> Mención oficial en aperturas y cierres</li>
+          <li><span class="sponsor-check">✓</span> Acceso VIP a todas las jornadas</li>
+          <li><span class="sponsor-check">✓</span> Cobertura en gacetillas y prensa</li>
+          <li><span class="sponsor-check">✓</span> Reunión con Maestro Miel y autoridades</li>
+        </ul>
+        <div class="sponsor-cta">
+          <a href="#contacto" class="btn btn-primary">Quiero ser sponsor</a>
+        </div>
+      </div>
+
+      <!-- BRONCE -->
+      <div class="sponsor-card reveal reveal-delay-2">
+        <div class="sponsor-tier">Sponsor</div>
+        <div class="sponsor-name">🥉 Bronce</div>
+        <ul class="sponsor-features">
+          <li><span class="sponsor-check">✓</span> Presencia institucional básica</li>
+          <li><span class="sponsor-check">✓</span> Logo en sección de auspiciantes</li>
+          <li><span class="sponsor-check">✓</span> Mención en redes sociales</li>
+          <li><span class="sponsor-check">✓</span> Invitación institucional al evento</li>
+        </ul>
+        <div class="sponsor-cta">
+          <a href="#contacto" class="btn btn-outline">Quiero ser sponsor</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NECESIDADES DE FINANCIAMIENTO -->
+<section class="section financiamiento">
+  <div class="container">
+    <div class="centered">
+      <div class="section-label">Transparencia</div>
+      <h2 class="section-title">Necesidades de financiamiento</h2>
+      <p class="section-sub" style="margin-bottom:0.5rem;"><strong style="color:var(--text-1);">Dónde se aplica el aporte.</strong></p>
+      <p class="section-sub">El financiamiento del proyecto se distribuye en siete áreas operativas. Buscamos aliados comprometidos con la protección de las infancias y el bienestar educativo.</p>
+    </div>
+    <div class="fin-grid">
+      <div class="fin-item reveal">
+        <span class="fin-icon">✈️</span>
+        <p>Pasajes internacionales</p>
+      </div>
+      <div class="fin-item reveal reveal-delay-1">
+        <span class="fin-icon">🛬</span>
+        <p>Vuelos internos</p>
+      </div>
+      <div class="fin-item reveal reveal-delay-2">
+        <span class="fin-icon">🏨</span>
+        <p>Alojamiento</p>
+      </div>
+      <div class="fin-item reveal">
+        <span class="fin-icon">📦</span>
+        <p>Logística general</p>
+      </div>
+      <div class="fin-item reveal reveal-delay-1">
+        <span class="fin-icon">🎬</span>
+        <p>Producción audiovisual</p>
+      </div>
+      <div class="fin-item reveal reveal-delay-2">
+        <span class="fin-icon">🎤</span>
+        <p>Honorarios profesionales</p>
+      </div>
+      <div class="fin-item reveal">
+        <span class="fin-icon">📢</span>
+        <p>Difusión y comunicación</p>
+      </div>
+    </div>
+    <div class="frase-destacada reveal">
+      <blockquote>Invertir en infancia hoy es prevenir violencia mañana.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA SOCIAL -->
+<section class="section">
+  <div class="container">
+    <div class="centered">
+      <div class="section-label">Alcance digital</div>
+      <h2 class="section-title">Prueba social</h2>
+      <p class="section-sub" style="margin-bottom:0.5rem;"><strong style="color:var(--text-1);">Su comunidad digital habla por sí sola.</strong></p>
+      <p class="section-sub">Maestro Miel cuenta con una comunidad activa de más de 1.5 millones de personas que siguen y comparten su contenido educativo. Estos son tres ejemplos recientes:</p>
+    </div>
+    <div class="social-grid">
+      <div class="social-card reveal">
+        <div class="social-platform">
+          <div class="tiktok-icon">T</div>
+          TikTok
+        </div>
+        <h3>Contenido educativo viral</h3>
+        <a href="https://www.tiktok.com/@maestromielpedrocota/video/7603450564961127701" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.9rem;padding:0.7rem 1.4rem;">
+          Ver en TikTok ↗
+        </a>
+      </div>
+      <div class="social-card reveal reveal-delay-1">
+        <div class="social-platform">
+          <div class="tiktok-icon">T</div>
+          TikTok
+        </div>
+        <h3>Educación emocional en el aula</h3>
+        <a href="https://www.tiktok.com/@maestromielpedrocota/video/7633632785634200853" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.9rem;padding:0.7rem 1.4rem;">
+          Ver en TikTok ↗
+        </a>
+      </div>
+      <div class="social-card reveal reveal-delay-2">
+        <div class="social-platform">
+          <div class="tiktok-icon">T</div>
+          TikTok
+        </div>
+        <h3>Vínculos protectores</h3>
+        <a href="https://www.tiktok.com/@maestromielpedrocota/video/7632718905940675860" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.9rem;padding:0.7rem 1.4rem;">
+          Ver en TikTok ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL / CONTACTO -->
+<section class="cta-final" id="contacto">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-kicker">Siguiente paso</div>
+      <h2>Sumate al proyecto.</h2>
+      <p>Estamos disponibles para presentar la propuesta a su institución, ajustar el alcance según sus posibilidades, y construir juntos un programa transformador.</p>
+      <div class="cta-buttons">
+        <a href="mailto:secretariasaledudis@gmail.com?subject=Quiero%20ser%20sponsor%20-%20Maestro%20Miel%20Argentina%202026" class="btn btn-white">
+          Quiero ser sponsor →
+        </a>
+        <a href="mailto:secretariasaledudis@gmail.com?subject=Solicitud%20de%20sede%20-%20Maestro%20Miel%20Argentina%202026" class="btn btn-ghost-white">
+          Solicitar sede en mi ciudad
+        </a>
+      </div>
+      <p style="font-size:0.85rem;color:rgba(147,197,253,0.8);margin-bottom:2rem;margin-top:-1rem;font-style:italic;">Conversemos sobre cómo aliarse.</p>
+      <div class="cta-info-grid">
+        <div class="cta-info-card">
+          <div class="cta-info-label">Fundación</div>
+          <div class="cta-info-value">Salud Educación Discapacidad</div>
+        </div>
+        <div class="cta-info-card">
+          <div class="cta-info-label">Presidente</div>
+          <div class="cta-info-value">Dr. Daniel Cangelosi Sánchez</div>
+        </div>
+        <div class="cta-info-card">
+          <div class="cta-info-label">Teléfono</div>
+          <div class="cta-info-value"><a href="tel:+542616295351">+54 261 629-5351</a></div>
+        </div>
+        <div class="cta-info-card">
+          <div class="cta-info-label">Email</div>
+          <div class="cta-info-value"><a href="mailto:secretariasaledudis@gmail.com">secretariasaledudis@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="SalEduDis">
+      <div>
+        <div class="footer-brand-name">Fundación SalEduDis</div>
+        <div class="footer-copy">DPPJ Matrícula N° 49638 · © 2026</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:secretariasaledudis@gmail.com">secretariasaledudis@gmail.com</a>
+      <a href="tel:+542616295351">+54 261 629-5351</a>
+      <a href="index.html">← Volver al dossier</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar shadow on scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shadow', window.scrollY > 10);
+});
+
+// Reveal on scroll
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('up'), i * 70);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+
+<!-- ════════════════════════════════════════════════════════════════
+     CARGADOR DE IMÁGENES · Fundación SalEduDis
+     ───────────────────────────────────────────────────────────────
+     Las fotos originales viven en el servidor. Para volver a cargarlas
+     de forma dinámica desde internet, pegá aquí la URL base de tu sitio
+     (la que termina en "/"). Ej:  https://saledudis.netlify.app/
+     Si la dejás vacía, o si una imagen no está disponible, se muestra
+     un marcador limpio y etiquetado en su lugar — sin romper el diseño.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+window.SED_IMG_BASE = window.SED_IMG_BASE || "https://fundacionsaledudis.netlify.app/"; // ← URL de tu sitio en Netlify
+(function () {
+  var BASE = (window.SED_IMG_BASE || "").trim();
+  if (BASE && !/\/$/.test(BASE)) BASE += "/";
+  var LABELS = {"img/logo.png":"SalEduDis · logo","img/daniel_retrato.png":"Dr. Daniel Cangelosi","img/sergio_retrato.png":"Lic. Sergio Adra","img/henry_retrato.png":"Arq. Henry Tong","img/convenio_udemm.png":"Convenio UdeMM","img/daniel_italia_entrevista_tv.jpg":"Entrevista TV · Italia","img/daniel_puebla_congreso.jpg":"Congreso · Puebla","img/daniel_italia_clase.jpg":"Clase · Italia","img/henry_conf2.png":"Henry · Hedera 2026","img/maestromiel.png":"Maestro Miel · Pedro Cota","media/palermo_audio.mp3":"audio · Palermo 2025","media/protesis_oculares.mp4":"video · prótesis oculares"};
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function svgPlaceholder(label, kind){
+    var bg='#EFE7D8', stripe='#E4D9C2', ink='#A1937A';
+    var l = esc(label || (kind||'imagen'));
+    var tag = kind === 'audio' ? 'audio pendiente' : (kind === 'video' ? 'video pendiente' : 'imagen pendiente');
+    var svg =
+      "<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'>"+
+        "<defs><pattern id='st' width='30' height='30' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'>"+
+          "<rect width='30' height='30' fill='"+bg+"'/><rect width='15' height='30' fill='"+stripe+"'/></pattern></defs>"+
+        "<rect width='900' height='900' fill='url(#st)'/>"+
+        "<rect x='14' y='14' width='872' height='872' fill='none' stroke='"+ink+"' stroke-width='2.5' stroke-dasharray='7 9'/>"+
+        "<text x='450' y='440' font-family='ui-monospace,Menlo,Consolas,monospace' font-size='34' font-weight='600' fill='"+ink+"' text-anchor='middle'>"+l+"</text>"+
+        "<text x='450' y='486' font-family='ui-monospace,Menlo,Consolas,monospace' font-size='22' fill='"+ink+"' text-anchor='middle' opacity='0.75'>"+tag+"</text>"+
+      "</svg>";
+    return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+  }
+
+  // ── Imágenes ──────────────────────────────────────────────
+  document.querySelectorAll('img').forEach(function(img){
+    var rel = img.getAttribute('src');
+    var isLocal = img.hasAttribute('data-local');
+    if (BASE && rel && !isLocal && !/^(https?:|data:)/.test(rel)) img.src = BASE + rel;
+    img.addEventListener('error', function onerr(){
+      img.removeEventListener('error', onerr);
+      img.src = svgPlaceholder(LABELS[rel] || rel, 'img');
+    });
+  });
+
+  // ── Audio / Video ─────────────────────────────────────────
+  document.querySelectorAll('audio, video').forEach(function(media){
+    var srcEl = media.querySelector('source');
+    var rel = srcEl ? srcEl.getAttribute('src') : null;
+    if (BASE && rel && srcEl && !/^(https?:|data:)/.test(rel)){
+      srcEl.src = BASE + rel; try { media.load(); } catch(e){}
+    }
+    media.addEventListener('error', onMediaErr, true);
+    function onMediaErr(){
+      media.removeEventListener('error', onMediaErr, true);
+      var kind = media.tagName.toLowerCase() === 'video' ? 'video' : 'audio';
+      var ph = document.createElement('div');
+      ph.setAttribute('role','img');
+      ph.setAttribute('aria-label', (LABELS[rel]||rel||kind));
+      ph.style.cssText =
+        'width:100%;min-height:'+(kind==='video'?'100%':'120px')+';height:'+(kind==='video'?'100%':'auto')+
+        ';border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;'+
+        'padding:1.5rem;text-align:center;color:#A1937A;background-image:repeating-linear-gradient(45deg,#EFE7D8 0 15px,#E4D9C2 15px 30px);'+
+        'outline:2.5px dashed #C9BBA0;outline-offset:-6px;font-family:ui-monospace,Menlo,Consolas,monospace;';
+      ph.innerHTML =
+        '<div style="font-size:1.05rem;font-weight:600;">'+ (LABELS[rel]||kind) +'</div>'+
+        '<div style="font-size:.82rem;opacity:.75;">'+ kind +' pendiente</div>';
+      if (media.parentNode) media.parentNode.replaceChild(ph, media);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

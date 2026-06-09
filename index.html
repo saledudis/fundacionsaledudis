@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundación SalEduDis — Dossier Institucional</title>
+<meta name="description" content="Fundación Salud, Educación y Discapacidad. Inclusivos por naturaleza. Propuesta institucional para organismos, gobiernos y empresas aliadas.">
+<meta property="og:title" content="Fundación SalEduDis — Inclusivos por naturaleza">
+<meta property="og:description" content="Propuesta institucional: capacitación, investigación y tecnología al servicio de la inclusión.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,0,600;9..144,0,700;9..144,0,900;9..144,1,400;9..144,1,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --naranja: #E8833A;
+  --naranja-oscuro: #C46A28;
+  --teal: #1E6B7A;
+  --teal-oscuro: #144A56;
+  --verde: #6FA04C;
+  --azul-profundo: #0E2540;
+  --crema: #F7F2E9;
+  --crema-oscuro: #EFE7D8;
+  --tinta: #1A1A1A;
+  --gris-texto: #4A4A4A;
+  --gris-suave: #9A9A9A;
+  --borde: #D8CEB8;
+  --sombra: 0 10px 40px -10px rgba(14,37,64,0.15);
+  --sombra-fuerte: 0 20px 60px -15px rgba(14,37,64,0.25);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  color: var(--tinta);
+  background: var(--crema);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--azul-profundo);
+}
+img { display:block; max-width:100%; }
+
+/* ======= NAV ======= */
+.nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  padding: 1rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(247,242,233,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nav.scrolled { border-bottom-color: var(--borde); }
+.nav-logo { display:flex; align-items:center; gap:0.75rem; }
+.nav-logo img { height:40px; width:auto; }
+.nav-logo-text { font-family:'Fraunces',serif; font-weight:600; font-size:0.95rem; color:var(--azul-profundo); letter-spacing:-0.01em; }
+.nav-matricula { font-size:0.7rem; color:var(--gris-texto); letter-spacing:0.05em; text-transform:uppercase; font-weight:500; }
+@media(max-width:700px){.nav-matricula{display:none;}}
+.nav-cta {
+  padding:0.6rem 1.25rem; font-size:0.85rem;
+  background:var(--naranja); color:white;
+  text-decoration:none; font-weight:600;
+  border-radius:100px; transition:background 0.2s ease;
+}
+.nav-cta:hover { background:var(--naranja-oscuro); }
+
+/* ======= HERO ======= */
+.hero {
+  min-height:100vh;
+  display:flex; flex-direction:column; justify-content:center;
+  padding:8rem 2rem 4rem;
+  position:relative;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(232,131,58,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(30,107,122,0.08) 0%, transparent 50%),
+    var(--crema);
+  overflow:hidden;
+}
+.hero::before {
+  content:"";
+  position:absolute; top:0; left:0; right:0; bottom:0;
+  background-image:
+    linear-gradient(var(--borde) 1px, transparent 1px),
+    linear-gradient(90deg, var(--borde) 1px, transparent 1px);
+  background-size:80px 80px;
+  opacity:0.15; pointer-events:none;
+}
+.hero-content { max-width:1100px; margin:0 auto; width:100%; position:relative; z-index:2; }
+.hero-kicker {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-size:0.8rem; font-weight:600;
+  letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:2rem;
+  padding:0.5rem 1rem;
+  background:rgba(30,107,122,0.08);
+  border-radius:100px;
+  border:1px solid rgba(30,107,122,0.2);
+}
+.hero-kicker::before {
+  content:""; width:6px; height:6px;
+  background:var(--teal); border-radius:50%;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+.hero h1 { font-size:clamp(2.5rem,6vw,5rem); font-weight:400; margin-bottom:2rem; max-width:900px; }
+.hero h1 .italic { font-style:italic; font-weight:400; color:var(--naranja); }
+.hero-lead { font-size:clamp(1.1rem,1.5vw,1.3rem); max-width:650px; color:var(--gris-texto); margin-bottom:3rem; line-height:1.6; }
+.hero-meta { display:flex; gap:3rem; flex-wrap:wrap; padding-top:2rem; border-top:1px solid var(--borde); }
+.hero-meta-item { display:flex; flex-direction:column; gap:0.25rem; }
+.hero-meta-label { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris-suave); font-weight:600; }
+.hero-meta-value { font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500; color:var(--azul-profundo); }
+.hero-scroll {
+  position:absolute; bottom:2rem; left:50%;
+  transform:translateX(-50%);
+  font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gris-suave);
+  writing-mode:vertical-rl;
+  animation:scrollHint 2s infinite;
+}
+@keyframes scrollHint { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+/* ======= SECCIONES ======= */
+section { padding:6rem 2rem; position:relative; }
+.section-inner { max-width:1100px; margin:0 auto; }
+.section-label {
+  display:inline-block; font-size:0.75rem; font-weight:600;
+  letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--naranja); margin-bottom:1rem;
+  padding-bottom:0.5rem; border-bottom:2px solid var(--naranja);
+}
+.section-title { font-size:clamp(2rem,4vw,3.2rem); margin-bottom:1.5rem; max-width:800px; }
+.section-intro { font-size:1.15rem; color:var(--gris-texto); max-width:650px; margin-bottom:4rem; }
+
+/* ======= ÁREAS DE DESARROLLO ======= */
+.areas-grid {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:1.75rem; margin-top:2.5rem;
+}
+@media(max-width:900px){.areas-grid{grid-template-columns:1fr;}}
+.area-card {
+  padding:2.5rem; background:white;
+  border-radius:4px; border-top:4px solid;
+  box-shadow:var(--sombra);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+.area-card:hover{transform:translateY(-6px);box-shadow:var(--sombra-fuerte);}
+.area-card:nth-child(1){border-top-color:var(--naranja);}
+.area-card:nth-child(2){border-top-color:var(--teal);}
+.area-card:nth-child(3){border-top-color:var(--verde);}
+.area-card:nth-child(4){border-top-color:var(--azul-profundo);}
+.area-titulo {
+  font-family:'Fraunces',serif; font-size:1.35rem; font-weight:600;
+  margin-bottom:0.75rem;
+}
+.area-card:nth-child(1) .area-titulo{color:var(--naranja);}
+.area-card:nth-child(2) .area-titulo{color:var(--teal);}
+.area-card:nth-child(3) .area-titulo{color:var(--verde);}
+.area-card:nth-child(4) .area-titulo{color:var(--azul-profundo);}
+.area-objetivo-label {
+  font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase;
+  font-weight:700; color:var(--gris-suave); margin-bottom:0.4rem;
+}
+.area-objetivo { color:var(--gris-texto); font-size:0.97rem; line-height:1.7; }
+
+/* ======= SOCIOS ======= */
+.socios-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:3rem; }
+@media(max-width:900px){.socios-grid{grid-template-columns:1fr;}}
+.socio {
+  background:white; border-radius:4px;
+  overflow:hidden; box-shadow:var(--sombra);
+  transition:transform 0.4s ease;
+}
+.socio:hover{transform:translateY(-4px);}
+.socio-foto {
+  width:100%; aspect-ratio:3/4;
+  object-fit:cover; object-position:center top;
+  background:var(--crema-oscuro);
+  display:block;
+}
+.socio-info { padding:1.75rem; }
+.socio-rol { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; margin-bottom:0.5rem; }
+.socio-1 .socio-rol{color:var(--naranja);}
+.socio-2 .socio-rol{color:var(--teal);}
+.socio-3 .socio-rol{color:var(--verde);}
+.socio-nombre { font-family:'Fraunces',serif; font-size:1.3rem; font-weight:600; color:var(--azul-profundo); margin-bottom:0.5rem; line-height:1.2; }
+.socio-credencial { font-size:0.9rem; color:var(--gris-texto); margin-bottom:1rem; min-height:2.8em; }
+.socio-linkedin {
+  display:inline-flex; align-items:center; gap:0.4rem;
+  font-size:0.85rem; color:var(--azul-profundo);
+  text-decoration:none; font-weight:500;
+  padding:0.4rem 0.85rem; border:1px solid var(--borde);
+  border-radius:100px; transition:all 0.2s ease;
+}
+.socio-linkedin:hover{background:var(--azul-profundo);color:white;border-color:var(--azul-profundo);}
+
+/* ======= RESPALDO ACADÉMICO ======= */
+.respaldo {
+  background:linear-gradient(135deg, var(--azul-profundo) 0%, #143558 100%);
+  color:white; padding:5rem 2rem; position:relative; overflow:hidden;
+}
+.respaldo::before {
+  content:""; position:absolute; top:-50%; right:-10%; width:60%; height:200%;
+  background:radial-gradient(circle, rgba(232,131,58,0.15) 0%, transparent 60%);
+  pointer-events:none;
+}
+.respaldo .section-inner { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; position:relative; z-index:2; }
+@media(max-width:900px){.respaldo .section-inner{grid-template-columns:1fr;gap:2rem;}}
+.respaldo .section-label{color:var(--naranja);border-bottom-color:var(--naranja);}
+.respaldo h2{color:white;font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1.5rem;}
+.respaldo p{color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:1rem;}
+.respaldo-card {
+  background:white; border-radius:8px; padding:1.25rem;
+  text-align:center; box-shadow:var(--sombra-fuerte); position:relative;
+}
+.respaldo-card::before {
+  content:"CONVENIO OFICIAL"; position:absolute;
+  top:-12px; left:50%; transform:translateX(-50%);
+  background:var(--naranja); color:white;
+  font-size:0.65rem; font-weight:700; letter-spacing:0.15em;
+  padding:0.35rem 0.8rem; border-radius:3px;
+}
+.respaldo-convenio-img { width:100%; border-radius:4px; display:block; }
+.respaldo-convenio-caption { font-size:0.75rem; color:var(--gris-suave); margin-top:0.75rem; letter-spacing:0.05em; font-style:italic; }
+
+/* ======= MAPA INTERNACIONAL ======= */
+.internacional { background:white; padding:7rem 2rem; }
+.mapa-wrap {
+  margin-top:3rem;
+  background:linear-gradient(135deg, #0a1c30 0%, #143558 100%);
+  border-radius:12px; padding:3rem 2rem 2rem;
+  box-shadow:var(--sombra-fuerte); position:relative; overflow:hidden;
+}
+.mapa-wrap::before {
+  content:""; position:absolute; top:0; left:0; right:0; bottom:0;
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(232,131,58,0.12) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(30,107,122,0.12) 0%, transparent 40%);
+  pointer-events:none;
+}
+.mapa-svg-container { position:relative; z-index:2; max-width:1000px; margin:0 auto; }
+.mapa-svg { width:100%; height:auto; display:block; }
+.mapa-pais { fill:rgba(255,255,255,0.15); stroke:rgba(255,255,255,0.3); stroke-width:0.3; }
+.mapa-punto { fill:var(--naranja); stroke:white; stroke-width:1.5; cursor:pointer; animation:puntoPulse 3s infinite; transition:r 0.3s ease; }
+.mapa-punto:hover{r:10;}
+@keyframes puntoPulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+.mapa-punto-halo { fill:none; stroke:var(--naranja); stroke-width:2; opacity:0.5; animation:haloExpand 2.5s infinite; }
+@keyframes haloExpand { 0%{r:6;opacity:0.7} 100%{r:18;opacity:0} }
+.mapa-label { font-family:'Inter Tight',sans-serif; font-size:11px; font-weight:600; fill:white; pointer-events:none; }
+.mapa-legenda {
+  display:flex; justify-content:flex-start; align-items:center;
+  margin-top:2rem; padding-top:2rem;
+  border-top:1px solid rgba(255,255,255,0.15);
+  flex-wrap:wrap; gap:2rem; position:relative; z-index:2;
+}
+.mapa-count { font-family:'Fraunces',serif; font-size:2.5rem; font-weight:600; color:var(--naranja); line-height:1; }
+.mapa-count-label { font-size:0.85rem; color:rgba(255,255,255,0.7); margin-top:0.25rem; letter-spacing:0.08em; }
+
+/* ======= QUOTE ======= */
+.quote-block { margin:5rem auto; max-width:900px; padding:0 2rem; text-align:center; position:relative; }
+.quote-marca { font-family:'Fraunces',serif; font-size:8rem; font-style:italic; color:var(--naranja); line-height:1; opacity:0.35; margin-bottom:-3rem; }
+.quote-texto { font-family:'Fraunces',serif; font-style:italic; font-size:clamp(1.3rem,2.8vw,2rem); font-weight:400; color:var(--azul-profundo); line-height:1.35; margin-bottom:1.5rem; }
+.quote-autor { font-size:0.85rem; color:var(--gris-texto); letter-spacing:0.1em; text-transform:uppercase; font-weight:600; }
+.quote-lugar { font-size:0.75rem; color:var(--gris-suave); margin-top:0.25rem; font-style:italic; letter-spacing:0.05em; }
+
+/* ======= TRAYECTORIA ======= */
+.trayectoria { background:var(--crema-oscuro); padding:7rem 2rem; }
+.trayectoria-destacado {
+  display:grid; grid-template-columns:5fr 4fr; gap:3rem; align-items:center;
+  margin-top:3rem; margin-bottom:4rem;
+  background:white; padding:3rem; border-radius:8px;
+  border-left:6px solid var(--naranja); box-shadow:var(--sombra);
+}
+@media(max-width:900px){.trayectoria-destacado{grid-template-columns:1fr;padding:2rem;}}
+.trayectoria-img { border-radius:4px; overflow:hidden; box-shadow:var(--sombra); }
+.trayectoria-img img { width:100%; height:auto; object-fit:contain; display:block; }
+.trayectoria-content .badge {
+  display:inline-block; font-size:0.7rem; font-weight:600;
+  letter-spacing:0.15em; text-transform:uppercase;
+  color:white; background:var(--naranja);
+  padding:0.35rem 0.8rem; border-radius:3px; margin-bottom:1rem;
+}
+.trayectoria-content h3 { font-size:1.8rem; margin-bottom:1rem; }
+.trayectoria-content p { color:var(--gris-texto); font-size:1rem; margin-bottom:0.75rem; }
+.trayectoria-content p strong { color:var(--azul-profundo); }
+
+/* Audio */
+.audio-card { margin-top:1.5rem; background:var(--crema); padding:1.25rem; border-radius:6px; border:1px solid var(--borde); }
+.audio-titulo { font-family:'Fraunces',serif; font-size:1rem; font-weight:600; color:var(--azul-profundo); margin-bottom:0.25rem; }
+.audio-sub { font-size:0.8rem; color:var(--gris-suave); margin-bottom:0.75rem; letter-spacing:0.05em; }
+audio { width:100%; height:40px; }
+
+/* Galería */
+.galeria-tray { display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:140px; gap:0.75rem; }
+@media(max-width:900px){.galeria-tray{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:500px){.galeria-tray{grid-template-columns:repeat(2,1fr);}}
+.g-item { overflow:hidden; border-radius:4px; position:relative; cursor:pointer; box-shadow:var(--sombra); }
+.g-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+.g-item:hover img{transform:scale(1.08);}
+.g-item::after {
+  content:attr(data-caption); position:absolute; bottom:0; left:0; right:0;
+  padding:1rem 0.75rem 0.5rem; color:white; font-size:0.75rem; font-weight:500;
+  background:linear-gradient(transparent, rgba(0,0,0,0.85));
+  opacity:0; transition:opacity 0.3s ease;
+}
+.g-item:hover::after{opacity:1;}
+.g-item:nth-child(1){grid-column:span 3;grid-row:span 2;}
+.g-item:nth-child(2){grid-column:span 3;grid-row:span 2;}
+.g-item:nth-child(3){grid-column:span 2;}
+.g-item:nth-child(4){grid-column:span 2;}
+.g-item:nth-child(5){grid-column:span 2;}
+@media(max-width:900px){
+  .g-item:nth-child(1),.g-item:nth-child(2){grid-column:span 3;grid-row:span 1;}
+  .g-item:nth-child(3),.g-item:nth-child(4),.g-item:nth-child(5){grid-column:span 1;}
+}
+@media(max-width:500px){
+  .g-item:nth-child(1),.g-item:nth-child(2){grid-column:span 2;}
+  .g-item:nth-child(3),.g-item:nth-child(4),.g-item:nth-child(5){grid-column:span 1;}
+}
+
+/* ======= SALUD (VIDEO) ======= */
+.salud { background:white; padding:6rem 2rem; }
+.salud-wrap { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+@media(max-width:900px){.salud-wrap{grid-template-columns:1fr;}}
+.salud-video { background:var(--azul-profundo); border-radius:8px; overflow:hidden; box-shadow:var(--sombra-fuerte); aspect-ratio:9/16; max-height:600px; margin:0 auto; width:auto; }
+.salud-video video { width:100%; height:100%; object-fit:contain; display:block; }
+.salud-texto .section-label{color:var(--teal);border-bottom-color:var(--teal);}
+.salud-texto h2{margin-bottom:1rem;font-size:clamp(1.8rem,3vw,2.5rem);}
+.salud-texto p{color:var(--gris-texto);font-size:1.05rem;margin-bottom:1rem;}
+.salud-texto p strong{color:var(--azul-profundo);}
+
+/* ======= CURSO ONLINE ======= */
+.curso { background:var(--crema-oscuro); padding:6rem 2rem; }
+.curso-wrap { display:grid; grid-template-columns:auto 1fr; gap:3.5rem; align-items:center; }
+@media(max-width:900px){.curso-wrap{grid-template-columns:1fr;gap:2.5rem;}}
+.curso-flyer { border-radius:8px; overflow:hidden; box-shadow:var(--sombra-fuerte); max-width:400px; width:100%; margin:0 auto; }
+.curso-flyer img { width:100%; height:auto; display:block; }
+.curso-texto .section-label{color:var(--teal);border-bottom-color:var(--teal);}
+.curso-texto h2 { font-size:clamp(1.6rem,3vw,2.3rem); margin-bottom:1rem; }
+.curso-texto p { color:var(--gris-texto); font-size:1.05rem; margin-bottom:2rem; max-width:480px; }
+.curso-btn { display:inline-flex; align-items:center; gap:0.6rem; padding:1rem 2.2rem; background:var(--naranja); color:white; text-decoration:none; font-weight:600; font-size:1rem; border-radius:100px; transition:all 0.3s ease; box-shadow:0 8px 24px rgba(232,131,58,0.35); }
+.curso-btn:hover { background:var(--naranja-oscuro); transform:translateY(-2px); box-shadow:0 12px 32px rgba(232,131,58,0.45); }
+.curso-btn .arrow{transition:transform 0.3s;}
+.curso-btn:hover .arrow{transform:translateX(4px);}
+
+/* ======= INVESTIGACIÓN ======= */
+.investigacion { background:#fff; padding:7rem 2rem; }
+.invest-figure { margin-top:2.75rem; }
+.invest-figure img { width:100%; height:auto; display:block; border-radius:8px; box-shadow:var(--sombra); }
+.invest-cap { font-size:0.9rem; color:var(--gris-texto); margin-top:1rem; font-style:italic; line-height:1.6; max-width:760px; }
+.invest-presidente { margin-top:4rem; padding-top:3.5rem; border-top:1px solid var(--borde); display:flex; flex-direction:column; align-items:center; text-align:center; }
+.invest-presidente img { max-width:440px; width:100%; height:auto; display:block; border-radius:8px; box-shadow:var(--sombra-fuerte); }
+.invest-presidente .invest-cap { text-align:center; max-width:560px; margin-left:auto; margin-right:auto; }
+
+/* ======= PROPUESTA INSTITUCIONAL ======= */
+.niveles { background:var(--crema); padding:7rem 2rem; position:relative; }
+.niveles::before {
+  content:""; position:absolute; top:0; left:0; right:0; bottom:0;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(232,131,58,0.05) 0%, transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(30,107,122,0.05) 0%, transparent 30%);
+  pointer-events:none;
+}
+.niveles-wrapper {
+  background:white; border-radius:8px; padding:4rem 3rem;
+  box-shadow:var(--sombra-fuerte); border:1px solid var(--borde);
+  position:relative; z-index:2;
+}
+@media(max-width:700px){.niveles-wrapper{padding:2.5rem 1.5rem;}}
+.niveles-intro { text-align:center; margin-bottom:3rem; }
+.niveles-intro h2{margin-bottom:1rem;}
+.niveles-intro p{color:var(--gris-texto);max-width:650px;margin:0 auto;font-size:1.05rem;line-height:1.7;}
+.propuesta-cta { text-align:center; margin-top:2.5rem; }
+.propuesta-link {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-family:'Fraunces',serif; font-size:1.2rem; font-weight:600;
+  color:var(--naranja); text-decoration:none;
+  padding:1rem 2.2rem; border:2px solid var(--naranja);
+  border-radius:100px; transition:all 0.3s;
+}
+.propuesta-link:hover{background:var(--naranja);color:white;}
+.propuesta-link .arrow{transition:transform 0.3s;}
+.propuesta-link:hover .arrow{transform:translateX(4px);}
+.propuesta-nota { font-size:0.82rem; color:var(--gris-suave); margin-top:0.75rem; font-style:italic; }
+
+/* ======= CIERRE ======= */
+.cierre {
+  background:linear-gradient(135deg, var(--azul-profundo) 0%, #0a1c30 100%);
+  color:white; padding:7rem 2rem; text-align:center; position:relative; overflow:hidden;
+}
+.cierre::before { content:""; position:absolute; top:-30%; left:-10%; width:50%; height:160%; background:radial-gradient(circle,rgba(30,107,122,0.25) 0%,transparent 60%); pointer-events:none; }
+.cierre::after { content:""; position:absolute; bottom:-30%; right:-10%; width:50%; height:160%; background:radial-gradient(circle,rgba(232,131,58,0.2) 0%,transparent 60%); pointer-events:none; }
+.cierre-inner{max-width:900px;margin:0 auto;position:relative;z-index:2;}
+.cierre-kicker{font-size:0.8rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--naranja);margin-bottom:1.5rem;font-weight:600;}
+.cierre h2{font-size:clamp(2rem,5vw,3.5rem);color:white;margin-bottom:1.5rem;font-weight:400;}
+.cierre h2 .italic{font-style:italic;color:var(--naranja);}
+.cierre p{font-size:1.15rem;color:rgba(255,255,255,0.8);max-width:550px;margin:0 auto 3rem;}
+.cta-btn {
+  display:inline-flex; align-items:center; gap:0.75rem;
+  padding:1.1rem 2.2rem; background:var(--naranja); color:white;
+  text-decoration:none; font-weight:600; font-size:1rem; letter-spacing:0.03em;
+  border-radius:100px; transition:all 0.3s ease;
+  box-shadow:0 8px 24px rgba(232,131,58,0.4);
+}
+.cta-btn:hover{background:var(--naranja-oscuro);transform:translateY(-2px);box-shadow:0 12px 32px rgba(232,131,58,0.5);}
+.cta-btn .arrow{transition:transform 0.3s;}
+.cta-btn:hover .arrow{transform:translateX(4px);}
+.cierre-contacto {
+  margin-top:3rem; padding-top:3rem;
+  border-top:1px solid rgba(255,255,255,0.15);
+  display:flex; justify-content:center; gap:3rem; flex-wrap:wrap;
+  font-size:0.9rem; color:rgba(255,255,255,0.6);
+}
+.cierre-contacto a{color:rgba(255,255,255,0.85);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.3);padding-bottom:2px;}
+.cierre-contacto a:hover{border-bottom-color:var(--naranja);color:var(--naranja);}
+
+/* ======= FOOTER ======= */
+footer { background:#080f1c; color:rgba(255,255,255,0.5); padding:2.5rem 2rem; text-align:center; font-size:0.8rem; letter-spacing:0.05em; }
+footer strong{color:rgba(255,255,255,0.8);font-weight:500;}
+
+/* ======= REVEAL ======= */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="SalEduDis">
+    <div>
+      <div class="nav-logo-text">Fundación SalEduDis</div>
+      <div class="nav-matricula">DPPJ Matrícula N° 49638</div>
+    </div>
+  </div>
+  <a href="#propuesta" class="nav-cta">Ver propuesta →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">Dossier institucional · 2026</div>
+    <h1>Salud. Educación. Discapacidad. <span class="italic">Inclusivos por naturaleza.</span></h1>
+    <p class="hero-lead">
+      Una fundación argentina con respaldo académico universitario, presencia internacional comprobada en más de diez países, y una misión clara: construir inclusión con rigor científico, formación validada y tecnología al servicio de las personas.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Constituida</div>
+        <div class="hero-meta-value">Abril 2023</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Personería jurídica</div>
+        <div class="hero-meta-value">Marzo 2024</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Sede</div>
+        <div class="hero-meta-value">Lanús, Buenos Aires</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Registro</div>
+        <div class="hero-meta-value">DPPJ · Leg. 270300</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Descubrir</div>
+</section>
+
+<!-- ÁREAS DE DESARROLLO -->
+<section id="areas">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Lo que hacemos, sostenido en la responsabilidad, experiencia y conciencia social.</h2>
+    <p class="section-intro reveal">Cada área responde a una necesidad real del tejido social argentino y latinoamericano. Trabajamos de forma articulada entre todas ellas.</p>
+    <div class="areas-grid">
+      <div class="area-card reveal">
+        <div class="area-titulo">Formación</div>
+        <div class="area-objetivo-label">Objetivo</div>
+        <div class="area-objetivo">Generar y promover instancias de formación y actualización profesional.</div>
+      </div>
+      <div class="area-card reveal">
+        <div class="area-titulo">Investigación</div>
+        <div class="area-objetivo-label">Objetivo</div>
+        <div class="area-objetivo">Favorecer investigaciones que contribuyan al desarrollo integral humano y mejora de las comunidades.</div>
+      </div>
+      <div class="area-card reveal">
+        <div class="area-titulo">Innovación y Tecnología</div>
+        <div class="area-objetivo-label">Objetivo</div>
+        <div class="area-objetivo">Facilitar el acceso a los individuos y las comunidades a equipamiento y tecnología, para favorecer su desarrollo humano integral.</div>
+      </div>
+      <div class="area-card reveal">
+        <div class="area-titulo">Promoción Humana y Social</div>
+        <div class="area-objetivo-label">Objetivo</div>
+        <div class="area-objetivo">Contribuir a la promoción humana y social de los individuos y comunidades, de acuerdo a los valores y lineamientos de la Fundación.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIOS -->
+<section style="background:var(--crema-oscuro);" id="socios">
+  <div class="section-inner">
+    <div class="section-label">Consejo de Administración</div>
+    <h2 class="section-title">Trayectorias que respaldan cada proyecto.</h2>
+    <p class="section-intro">La solidez institucional de una fundación se mide por la coherencia y la trayectoria de quienes la conducen.</p>
+    <div class="socios-grid">
+      <article class="socio socio-1 reveal">
+        <img src="img/daniel_retrato.png" alt="Dr. Daniel Horacio Cangelosi Sánchez" class="socio-foto">
+        <div class="socio-info">
+          <div class="socio-rol">Presidente</div>
+          <div class="socio-nombre">Dr. Daniel Horacio Cangelosi Sánchez</div>
+          <div class="socio-credencial">Conferencista internacional en educación, inclusión y desarrollo humano. Actividad académica en 14 países.</div>
+          <a href="https://www.linkedin.com/in/cangelosi-sanchez/" class="socio-linkedin" target="_blank" rel="noopener">in · LinkedIn</a>
+        </div>
+      </article>
+      <article class="socio socio-2 reveal">
+        <img src="img/sergio_retrato.png" alt="Lic. Sergio Aníbal Adra" class="socio-foto">
+        <div class="socio-info">
+          <div class="socio-rol">Secretario</div>
+          <div class="socio-nombre">Lic. Sergio Aníbal Adra</div>
+          <div class="socio-credencial">Licenciado en Rehabilitación Visual. Especialista en prótesis oculares y discapacidad sensorial.</div>
+          <a href="https://www.linkedin.com/in/sergio-adra-17004531/" class="socio-linkedin" target="_blank" rel="noopener">in · LinkedIn</a>
+        </div>
+      </article>
+      <article class="socio socio-3 reveal">
+        <img src="img/henry_retrato.png" alt="Arq. Soft. Henry Tong Valera" class="socio-foto">
+        <div class="socio-info">
+          <div class="socio-rol">Tesorero</div>
+          <div class="socio-nombre">Arq. Soft. Henry Tong Valera</div>
+          <div class="socio-credencial">Arquitecto de software. Disertante internacional en tecnología, con actividad en América, Asia y África.</div>
+          <a href="https://www.linkedin.com/in/henry-tong-info/" class="socio-linkedin" target="_blank" rel="noopener">in · LinkedIn</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RESPALDO ACADÉMICO -->
+<section class="respaldo" id="respaldo">
+  <div class="section-inner">
+    <div>
+      <div class="section-label">Validez académica</div>
+      <h2>Nuestros cursos cuentan con respaldo universitario formal.</h2>
+      <p>A través de nuestro convenio marco con la <strong>Universidad de la Marina Mercante</strong>, los programas de capacitación de la Fundación SalEduDis otorgan certificaciones con validez académica reconocida.</p>
+      <p>Esto posiciona a nuestras formaciones muy por encima del estándar de la mayoría de las ONG del sector: quien se capacita con nosotros recibe credenciales que verdaderamente agregan valor a su trayectoria profesional.</p>
+    </div>
+    <div class="respaldo-card">
+      <img src="img/convenio_udemm.png" alt="Convenio de Cooperación Recíproca UdeMM y FSED" class="respaldo-convenio-img">
+      <div class="respaldo-convenio-caption">Convenio suscripto en Ciudad Autónoma de Buenos Aires · Junio 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA INTERNACIONAL -->
+<section class="internacional" id="internacional">
+  <div class="section-inner">
+    <div class="section-label">Proyección internacional</div>
+    <h2 class="section-title">Presencia académica y pública en más de 10 países.</h2>
+    <p class="section-intro">
+      Los miembros fundadores de la Fundación SalEduDis acumulan una trayectoria internacional que abarca Argentina, Italia, México, España, China y más de una decena de naciones donde han disertado, investigado o representado institucionalmente sus áreas de especialidad.
+    </p>
+    <div class="mapa-wrap reveal">
+      <div class="mapa-svg-container">
+        <svg class="mapa-svg" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1000" height="520" fill="transparent"/>
+          <!-- Continentes -->
+          <path class="mapa-pais" d="M 120 80 L 280 70 L 320 120 L 310 180 L 260 220 L 200 225 L 150 200 L 130 150 Z"/>
+          <path class="mapa-pais" d="M 200 225 L 260 220 L 280 245 L 260 260 L 220 255 Z"/>
+          <path class="mapa-pais" d="M 260 260 L 310 255 L 340 290 L 345 360 L 320 440 L 290 480 L 270 460 L 260 400 L 255 330 Z"/>
+          <path class="mapa-pais" d="M 470 100 L 560 90 L 580 130 L 570 170 L 530 180 L 480 170 L 465 140 Z"/>
+          <path class="mapa-pais" d="M 490 180 L 580 180 L 620 230 L 630 300 L 600 380 L 560 410 L 520 390 L 490 330 L 480 250 Z"/>
+          <path class="mapa-pais" d="M 580 90 L 800 80 L 860 130 L 880 200 L 840 250 L 780 260 L 700 230 L 640 200 L 600 160 Z"/>
+          <path class="mapa-pais" d="M 780 260 L 840 260 L 860 290 L 830 320 L 790 310 L 770 290 Z"/>
+          <path class="mapa-pais" d="M 820 380 L 900 380 L 910 420 L 870 440 L 830 420 Z"/>
+          <!-- América Latina -->
+          <circle class="mapa-punto-halo" cx="290" cy="430"/>
+          <circle class="mapa-punto" cx="290" cy="430" r="6"/><text class="mapa-label" x="298" y="443">Argentina</text>
+          <circle class="mapa-punto-halo" cx="278" cy="420"/>
+          <circle class="mapa-punto" cx="278" cy="420" r="6"/><text class="mapa-label" x="240" y="418" text-anchor="end">Chile</text>
+          <circle class="mapa-punto-halo" cx="288" cy="370"/>
+          <circle class="mapa-punto" cx="288" cy="370" r="6"/><text class="mapa-label" x="296" y="374">Bolivia</text>
+          <circle class="mapa-punto-halo" cx="272" cy="350"/>
+          <circle class="mapa-punto" cx="272" cy="350" r="6"/><text class="mapa-label" x="240" y="354" text-anchor="end">Perú</text>
+          <circle class="mapa-punto-halo" cx="268" cy="320"/>
+          <circle class="mapa-punto" cx="268" cy="320" r="6"/><text class="mapa-label" x="236" y="324" text-anchor="end">Ecuador</text>
+          <circle class="mapa-punto-halo" cx="278" cy="298"/>
+          <circle class="mapa-punto" cx="278" cy="298" r="6"/><text class="mapa-label" x="286" y="294">Colombia</text>
+          <circle class="mapa-punto-halo" cx="298" cy="283"/>
+          <circle class="mapa-punto" cx="298" cy="283" r="6"/><text class="mapa-label" x="306" y="278">Venezuela</text>
+          <circle class="mapa-punto-halo" cx="252" cy="270"/>
+          <circle class="mapa-punto" cx="252" cy="270" r="6"/><text class="mapa-label" x="244" y="264" text-anchor="end">Panamá</text>
+          <circle class="mapa-punto-halo" cx="245" cy="235"/>
+          <circle class="mapa-punto" cx="245" cy="235" r="6"/><text class="mapa-label" x="237" y="232" text-anchor="end">Cuba</text>
+          <circle class="mapa-punto-halo" cx="195" cy="215"/>
+          <circle class="mapa-punto" cx="195" cy="215" r="6"/><text class="mapa-label" x="187" y="211" text-anchor="end">México</text>
+          <!-- Europa -->
+          <circle class="mapa-punto-halo" cx="480" cy="160"/>
+          <circle class="mapa-punto" cx="480" cy="160" r="6"/><text class="mapa-label" x="472" y="156" text-anchor="end">España</text>
+          <circle class="mapa-punto-halo" cx="530" cy="155"/>
+          <circle class="mapa-punto" cx="530" cy="155" r="6"/><text class="mapa-label" x="538" y="151">Italia</text>
+          <!-- Asia -->
+          <circle class="mapa-punto-halo" cx="790" cy="180"/>
+          <circle class="mapa-punto" cx="790" cy="180" r="6"/><text class="mapa-label" x="798" y="176">China</text>
+          <circle class="mapa-punto-halo" cx="790" cy="255"/>
+          <circle class="mapa-punto" cx="790" cy="255" r="6"/><text class="mapa-label" x="782" y="252" text-anchor="end">Tailandia</text>
+          <circle class="mapa-punto-halo" cx="805" cy="290"/>
+          <circle class="mapa-punto" cx="805" cy="290" r="6"/><text class="mapa-label" x="813" y="294">Malasia</text>
+          <!-- África Central -->
+          <circle class="mapa-punto-halo" cx="545" cy="305"/>
+          <circle class="mapa-punto" cx="545" cy="305" r="6"/><text class="mapa-label" x="553" y="301">R. D. Congo</text>
+        </svg>
+      </div>
+      <div class="mapa-legenda">
+        <div>
+          <div class="mapa-count">15+</div>
+          <div class="mapa-count-label">PAÍSES DE ACTIVIDAD COMPROBADA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-block reveal">
+  <div class="quote-marca">"</div>
+  <div class="quote-texto">La inclusión educativa no se define por el acompañamiento ni por el rechazo, sino por la decisión cotidiana de una sociedad de hacer lugar al otro.</div>
+  <div class="quote-autor">Dr. Daniel Horacio Cangelosi Sánchez</div>
+  <div class="quote-lugar">Disertación · Palermo, Sicilia · Italia 2025</div>
+</div>
+
+<!-- TRAYECTORIA -->
+<section class="trayectoria" id="trayectoria">
+  <div class="section-inner">
+    <div class="section-label">Hitos recientes</div>
+    <h2 class="section-title">Encuentros, cátedras y reconocimientos.</h2>
+    <p class="section-intro">Un recorrido visual por la actividad académica y pública más reciente de la Fundación y sus miembros.</p>
+
+    <!-- Italia — foto de entrevista TV -->
+    <div class="trayectoria-destacado reveal">
+      <div class="trayectoria-img">
+        <img src="img/daniel_italia_entrevista_tv.jpg" alt="Dr. Cangelosi entrevistado por la televisión italiana">
+      </div>
+      <div class="trayectoria-content">
+        <span class="badge">Italia · 2025</span>
+        <h3>Professore invitado en el PIS 2025 — Italia</h3>
+        <p>En el marco del encuentro italiano <strong>"La sfida di fare sistema"</strong> (III Edición), el Dr. Cangelosi Sánchez fue invitado como <strong>Professore</strong> para disertar sobre inclusión educativa ante audiencias universitarias en la Università y en la ciudad de Bagheria, Sicilia.</p>
+        <p>Sus intervenciones fueron registradas por medios italianos —incluyendo una entrevista televisiva— y reconocidas con placas institucionales por las autoridades locales.</p>
+        <div class="audio-card">
+          <div class="audio-titulo">📻 Disertación: "La inclusión educativa entre el acompañamiento y el rechazo"</div>
+          <div class="audio-sub">Palermo, Sicilia · Italia 2025</div>
+          <audio controls preload="metadata">
+            <source src="media/palermo_audio.mp3" type="audio/mpeg">
+            Su navegador no soporta el reproductor de audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galería -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:2rem;">
+      <div class="g-item reveal" data-caption="Clase en la Università del Sacro Cuore · Milán, Italia" style="height:300px;">
+        <img src="img/daniel_puebla_congreso.jpg" alt="Clase en la Università del Sacro Cuore, Milán">
+      </div>
+      <div class="g-item reveal" data-caption="Italia: reconocimiento por el libro «Inclusión educativa entre el apoyo y la negación»" style="height:300px;">
+        <img src="img/daniel_italia_clase.jpg" alt="Reconocimiento por el libro Inclusión educativa entre el apoyo y la negación" style="object-fit:contain;background:var(--crema-oscuro);">
+      </div>
+    </div>
+
+    <!-- Henry -->
+    <div class="trayectoria-destacado reveal" style="margin-top:4rem;border-left-color:var(--teal);">
+      <div class="trayectoria-content">
+        <span class="badge" style="background:var(--teal);">Investigación de tecnologías emergentes y Web3</span>
+        <h3>Disertaciones técnicas en foros de innovación</h3>
+        <p>El <strong>Arq. Soft. Henry Tong Valera</strong> participa regularmente como ponente en eventos del ecosistema tecnológico argentino e internacional: Hedera University Program, Sociedad Argentina de IA (SAIA), Cultura C3, NERD Conf y el programa UniBlock (Red de Universidades en Blockchain).</p>
+        <p>Su actividad internacional incluye participaciones en <strong>América del Norte y Central, Latam, Europa, China y África</strong>, consolidando el eje <strong>Tecnología</strong> de la Fundación y garantizando la incorporación de innovación digital aplicada a soluciones inclusivas.</p>
+      </div>
+      <div class="trayectoria-img">
+        <img src="img/henry_conf2.png" alt="Henry Tong en Hedera Mendoza 2026">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTO SALUD -->
+<section class="salud" id="salud">
+  <div class="section-inner">
+    <div class="salud-wrap">
+      <div class="salud-video reveal">
+        <video controls preload="metadata" playsinline>
+          <source src="media/protesis_oculares.mp4" type="video/mp4">
+          Su navegador no soporta video HTML5.
+        </video>
+      </div>
+      <div class="salud-texto">
+        <div class="section-label">Proyecto destacado · Salud</div>
+        <h2>Prótesis oculares: tecnología, oficio y dignidad.</h2>
+        <p>A cargo del <strong>Lic. Sergio Aníbal Adra</strong>, especialista en rehabilitación visual, este proyecto muestra el trabajo técnico y humano detrás de la elaboración de prótesis oculares personalizadas.</p>
+        <p>Es un ejemplo concreto de cómo la Fundación articula sus áreas: <strong>Salud</strong> (intervención especializada), <strong>Educación</strong> (formación de nuevos profesionales) y <strong>Discapacidad</strong> (acompañamiento integral a personas con discapacidad visual).</p>
+        <p style="font-size:0.9rem;color:var(--gris-suave);margin-top:1.5rem;font-style:italic;">▶ Reproduzca el video para conocer el proceso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSO ONLINE -->
+<section class="curso" id="curso">
+  <div class="section-inner">
+    <div class="curso-wrap">
+      <div class="curso-flyer reveal">
+        <img src="img/maestromiel_curso.jpeg" data-local alt="Curso online: Huellas de la infancia — Maestro Miel, sábado 27 de junio de 2026">
+      </div>
+      <div class="curso-texto">
+        <div class="section-label">Próximo curso online</div>
+        <h2>«Huellas de la infancia: la historia que vive en ti»</h2>
+        <p>Un encuentro internacional con el <strong>Maestro Miel (Pedro Cota)</strong>, junto a Alina Bueno e Ivana Vanrell. Sábado 27 de junio de 2026.</p>
+        <a href="mailto:secretariasaledudis@gmail.com?subject=Informaci%C3%B3n%20-%20Curso%20Huellas%20de%20la%20infancia" class="curso-btn">Más información <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIGACIÓN -->
+<section class="investigacion" id="investigacion">
+  <div class="section-inner">
+    <div class="section-label">Investigación en curso</div>
+    <h2 class="section-title reveal">Investigación que estamos llevando a cabo con la Fundación Universitaria San Martín de Colombia.</h2>
+    <p class="section-intro reveal">Creencias y actitudes de los profesores universitarios ante el uso de la Inteligencia Artificial Generativa.</p>
+
+    <figure class="invest-figure reveal">
+      <img src="img/colombia_investigacion.jpeg" data-local alt="Reunión virtual del semillero de investigación con el Dr. Hugo Hernán Ortiz">
+      <figcaption class="invest-cap">El Dr. Hugo Hernán Ortiz junto a los integrantes del semillero de investigación, en reunión virtual con nuestro presidente.</figcaption>
+    </figure>
+
+    <figure class="invest-presidente reveal">
+      <img src="img/presidente_fellow.png" data-local alt="Presidente de la Fundación SalEduDis — ECD in Crisis Research Fellow 2026-2027">
+      <figcaption class="invest-cap">Nuestro presidente: seleccionado entre 11 a nivel mundial como <strong>ECD in Crisis Research Fellow 2026–2027</strong> — Moving Minds Alliance.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PROPUESTA INSTITUCIONAL -->
+<section class="niveles" id="propuesta">
+  <div class="section-inner">
+    <div class="niveles-wrapper">
+      <div class="niveles-intro">
+        <div class="section-label" style="margin-bottom:1.5rem;">Propuesta institucional · 2026/2027</div>
+        <h2>Niveles de compromiso institucional.</h2>
+        <p>Invitamos a organismos gubernamentales, bancos y empresas a acompañar nuestro evento insignia 2026/2027 con el educador mexicano <strong>Dr. Honoris Causa Pedro Cota (Maestro Miel)</strong>.</p>
+      </div>
+      <div class="propuesta-cta">
+        <a href="propuesta.html" class="propuesta-link">
+          Ver la propuesta completa <span class="arrow">→</span>
+        </a>
+        <p class="propuesta-nota">(altamente recomendado)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre" id="contacto">
+  <div class="cierre-inner">
+    <div class="cierre-kicker">Siguiente paso</div>
+    <h2>Conversemos sobre <span class="italic">cómo sumarse.</span></h2>
+    <p>Estamos disponibles para agendar una reunión presencial o virtual y responder todas las consultas que su institución considere pertinentes.</p>
+    <a href="mailto:secretariasaledudis@gmail.com?subject=Solicitud%20de%20reuni%C3%B3n%20-%20Fundaci%C3%B3n%20SalEduDis" class="cta-btn">
+      Solicitar reunión <span class="arrow">→</span>
+    </a>
+    <div class="cierre-contacto">
+      <div>
+        <strong style="display:block;color:white;margin-bottom:0.3rem;">Email institucional</strong>
+        <a href="mailto:secretariasaledudis@gmail.com">secretariasaledudis@gmail.com</a>
+      </div>
+      <div>
+        <strong style="display:block;color:white;margin-bottom:0.3rem;">Domicilio legal</strong>
+        Gobernador Irigoyen 381, Lanús, Buenos Aires
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Fundación SalEduDis</strong> · DPPJ Matrícula N° 49638 · Legajo N° 270300 · Folio N° 212194 · Regida por Ley 19.836<br>
+  © 2026 Fundación Salud, Educación y Discapacidad. Todos los derechos reservados.
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Reveal animations
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     CARGADOR DE IMÁGENES · Fundación SalEduDis
+     ───────────────────────────────────────────────────────────────
+     Las fotos originales viven en el servidor. Para volver a cargarlas
+     de forma dinámica desde internet, pegá aquí la URL base de tu sitio
+     (la que termina en "/"). Ej:  https://saledudis.netlify.app/
+     Si la dejás vacía, o si una imagen no está disponible, se muestra
+     un marcador limpio y etiquetado en su lugar — sin romper el diseño.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+window.SED_IMG_BASE = window.SED_IMG_BASE || "https://fundacionsaledudis.netlify.app/"; // ← URL de tu sitio en Netlify
+(function () {
+  var BASE = (window.SED_IMG_BASE || "").trim();
+  if (BASE && !/\/$/.test(BASE)) BASE += "/";
+  var LABELS = {"img/logo.png":"SalEduDis · logo","img/daniel_retrato.png":"Dr. Daniel Cangelosi","img/sergio_retrato.png":"Lic. Sergio Adra","img/henry_retrato.png":"Arq. Henry Tong","img/convenio_udemm.png":"Convenio UdeMM","img/daniel_italia_entrevista_tv.jpg":"Entrevista TV · Italia","img/daniel_puebla_congreso.jpg":"Congreso · Puebla","img/daniel_italia_clase.jpg":"Clase · Italia","img/henry_conf2.png":"Henry · Hedera 2026","img/maestromiel.png":"Maestro Miel · Pedro Cota","media/palermo_audio.mp3":"audio · Palermo 2025","media/protesis_oculares.mp4":"video · prótesis oculares"};
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function svgPlaceholder(label, kind){
+    var bg='#EFE7D8', stripe='#E4D9C2', ink='#A1937A';
+    var l = esc(label || (kind||'imagen'));
+    var tag = kind === 'audio' ? 'audio pendiente' : (kind === 'video' ? 'video pendiente' : 'imagen pendiente');
+    var svg =
+      "<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'>"+
+        "<defs><pattern id='st' width='30' height='30' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'>"+
+          "<rect width='30' height='30' fill='"+bg+"'/><rect width='15' height='30' fill='"+stripe+"'/></pattern></defs>"+
+        "<rect width='900' height='900' fill='url(#st)'/>"+
+        "<rect x='14' y='14' width='872' height='872' fill='none' stroke='"+ink+"' stroke-width='2.5' stroke-dasharray='7 9'/>"+
+        "<text x='450' y='440' font-family='ui-monospace,Menlo,Consolas,monospace' font-size='34' font-weight='600' fill='"+ink+"' text-anchor='middle'>"+l+"</text>"+
+        "<text x='450' y='486' font-family='ui-monospace,Menlo,Consolas,monospace' font-size='22' fill='"+ink+"' text-anchor='middle' opacity='0.75'>"+tag+"</text>"+
+      "</svg>";
+    return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+  }
+
+  // ── Imágenes ──────────────────────────────────────────────
+  document.querySelectorAll('img').forEach(function(img){
+    var rel = img.getAttribute('src');
+    var isLocal = img.hasAttribute('data-local');
+    if (BASE && rel && !isLocal && !/^(https?:|data:)/.test(rel)) img.src = BASE + rel;
+    img.addEventListener('error', function onerr(){
+      img.removeEventListener('error', onerr);
+      img.src = svgPlaceholder(LABELS[rel] || rel, 'img');
+    });
+  });
+
+  // ── Audio / Video ─────────────────────────────────────────
+  document.querySelectorAll('audio, video').forEach(function(media){
+    var srcEl = media.querySelector('source');
+    var rel = srcEl ? srcEl.getAttribute('src') : null;
+    if (BASE && rel && srcEl && !/^(https?:|data:)/.test(rel)){
+      srcEl.src = BASE + rel; try { media.load(); } catch(e){}
+    }
+    media.addEventListener('error', onMediaErr, true);
+    function onMediaErr(){
+      media.removeEventListener('error', onMediaErr, true);
+      var kind = media.tagName.toLowerCase() === 'video' ? 'video' : 'audio';
+      var ph = document.createElement('div');
+      ph.setAttribute('role','img');
+      ph.setAttribute('aria-label', (LABELS[rel]||rel||kind));
+      ph.style.cssText =
+        'width:100%;min-height:'+(kind==='video'?'100%':'120px')+';height:'+(kind==='video'?'100%':'auto')+
+        ';border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;'+
+        'padding:1.5rem;text-align:center;color:#A1937A;background-image:repeating-linear-gradient(45deg,#EFE7D8 0 15px,#E4D9C2 15px 30px);'+
+        'outline:2.5px dashed #C9BBA0;outline-offset:-6px;font-family:ui-monospace,Menlo,Consolas,monospace;';
+      ph.innerHTML =
+        '<div style="font-size:1.05rem;font-weight:600;">'+ (LABELS[rel]||kind) +'</div>'+
+        '<div style="font-size:.82rem;opacity:.75;">'+ kind +' pendiente</div>';
+      if (media.parentNode) media.parentNode.replaceChild(ph, media);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
